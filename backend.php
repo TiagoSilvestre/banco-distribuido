@@ -6,7 +6,7 @@ echo "</pre>";
 //cont13
 function conexao(){
 	try{
-		$con = new PDO('mysql:host=localhost;dbname=exercicio20', 'root', 'a1b2c3d4');
+		$con = new PDO('mysql:host=localhost;dbname=exercicio20', 'root', '');
 	}catch(Exception $e){
 		echo $e->getMessage();
 	}
@@ -14,14 +14,17 @@ function conexao(){
 }
 
 
-function inserir(){
+function executaQuery($sql){
 	$con = conexao();
-	$query = 'INSERT INTO pessoas(nomePessoa, Logradouros_idLogradouro, Bairros_idBairro, Cidades_idCidade, Estados_idEstado, Paises_idPais) VALUES ({})';
+	//$query = 'INSERT INTO pessoas(nomePessoa, Logradouros_idLogradouro, Bairros_idBairro, Cidades_idCidade, Estados_idEstado, Paises_idPais) VALUES ({})';
 	
-	$stm = $con->prepare($query);
-	$stm->execute();
-	
+	$consulta = $con->prepare($sql);
+	$consulta->execute();
+	return $consulta->fetchAll();
 }
 
+function selectLogradouro(){
+
+}
 
 ?>
