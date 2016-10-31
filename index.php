@@ -12,7 +12,7 @@
 	<body>
 	<?php require "backend.php";?>
 		<div class="container">
-			<p style="text-align: center;font-size: 23px;"><u>Cadastro de Pessoas</u></p>
+			<p style="text-align: center;font-size: 23px;"><u></u></p>
 
 			<form method="POST" action="">
 				<div class="contint">
@@ -44,11 +44,14 @@
 
 					<div>
 						<select name="Logradouros_idLogradouro">
-							<option>Milk</option>
-							<option>Coffee</option>
-							<option>Tea</option>
+							<?php
+								$logr = executaQuery('SELECT * FROM logradouros');
+								foreach ($logr as $l){
+									echo '<option>' . $l['nomeLogradouro'] . '</option>';
+								}
+							?>
 						</select>
-						<a href="#" class="btn brn-sm btn-info">+</a>
+						<a href="#" class="btn brn-sm btn-info" data-toggle="modal" data-target="#myModal" onclick="addCampo('Logradouro')">+</a>
 						<br><br>
 					</div>
 				</div>
@@ -60,9 +63,12 @@
 
 					<div>
 						<select name="Bairros_idBairro">
-							<option>Milk</option>
-							<option>Coffee</option>
-							<option>Tea</option>
+							<?php
+							$logr = executaQuery('SELECT * FROM bairros');
+							foreach ($logr as $l){
+								echo '<option>' . $l['nomeLogradouro'] . '</option>';
+							}
+							?>
 						</select>
 						<a href="#" class="btn brn-sm btn-info">+</a>
 						<br><br>
@@ -125,12 +131,63 @@
 
 			</form>
 		</div>
+	<!-- Button trigger modal
+	<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+		+
+	</button>-->
+
+	<!-- Modal -->
+		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title" id="myModalLabel"></h4>
+					</div>
+					<div class="modal-body">
+						...
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Sair</button>
+						<button type="button" class="btn btn-primary">Cadastrar</button>
+					</div>
+				</div>
+			</div>
+		</div>
 
 
-
-	<?php
-	$a = executaQuery('SELECT * FROM logradouros');
-	print_r($a);
-	?>
+	<script>
+		function addCampo(tit){
+			$( "#myModalLabel" ).text(tit);
+		}
+	</script>
 	</body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<?php
+echo "<pre>";
+print_r($_POST);
+echo "</pre>";
+if(!empty($_POST['codigo']) && !empty($_POST['nomePessoa'])){
+	echo "tem";
+}
+
+?>
