@@ -51,7 +51,7 @@
 								}
 							?>
 						</select>
-						<a href="#" class="btn brn-sm btn-info" data-toggle="modal" data-target="#myModal" onclick="addCampo('Logradouro')">+</a>
+						<a href="#" class="btn brn-sm btn-info" data-toggle="modal" data-target="#myModal" onclick="addCampo('Adicionar Logradouro')">+</a>
 						<br><br>
 					</div>
 				</div>
@@ -128,7 +128,6 @@
 				<input type="Submit" class="btn brn-sm btn-primary" name="operacao" value="Inclusão">
 				<input type="Submit" class="btn brn-sm btn-primary" name="operacao" value="Alteração">
 				<input type="Submit" class="btn brn-sm btn-primary" name="operacao" value="Consultar">
-
 			</form>
 		</div>
 	<!-- Button trigger modal
@@ -145,11 +144,11 @@
 						<h4 class="modal-title" id="myModalLabel"></h4>
 					</div>
 					<div class="modal-body">
-						...
+						<input type="text" name="novoCadastro" class="novoCadastro"/>
 					</div>
 					<div class="modal-footer">
-						<button type="button" class="btn btn-default" data-dismiss="modal">Sair</button>
-						<button type="button" class="btn btn-primary">Cadastrar</button>
+						<button type="button" class="btn btn-primary cadastrar" data-dismiss="modal">Cadastrar</button>
+						<!--<button type="button" class="btn btn-primary">Cadastrar</button>-->
 					</div>
 				</div>
 			</div>
@@ -160,12 +159,24 @@
 		function addCampo(tit){
 			$( "#myModalLabel" ).text(tit);
 		}
+		var campo = $('#myModalLabel').text();
+		var valor = $('.novoCadastro').val();
+
+		$('.cadastrar').click(function(){
+			$.ajax({
+				type: 'POST',
+				data: {campo : valor},
+				url:'processa.php',
+			}).done(function( msg ) {
+				alert( "Data Saved: " + msg );
+			}).fail(function(s) {
+				alert( "Ocorreram erros ao salvar" );
+			});
+		});
+
 	</script>
 	</body>
 </html>
-
-
-
 
 
 

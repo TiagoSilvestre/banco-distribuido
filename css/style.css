@@ -32,3 +32,11 @@ p{
 .fbutton{
     margin-left: 80px;
 }
+
+.modal-dialog {
+    width: 500px !important;
+}
+
+.novoCadastro{
+    width: 100%;
+}
