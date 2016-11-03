@@ -47,11 +47,11 @@
 							<?php
 								$logr = executaQuery('SELECT * FROM logradouros');
 								foreach ($logr as $l){
-									echo '<option>' . $l['nomeLogradouro'] . '</option>';
+									echo '<option>' . $l['nome'] . '</option>';
 								}
 							?>
 						</select>
-						<a href="#" class="btn brn-sm btn-info" data-toggle="modal" data-target="#myModal" onclick="addCampo('Adicionar Logradouro')">+</a>
+						<a href="#" class="btn brn-sm btn-info" data-toggle="modal" data-target="#myModal" onclick="addCampo('Adicionar Logradouros')">+</a>
 						<br><br>
 					</div>
 				</div>
@@ -66,7 +66,7 @@
 							<?php
 							$logr = executaQuery('SELECT * FROM bairros');
 							foreach ($logr as $l){
-								echo '<option>' . $l['nomeLogradouro'] . '</option>';
+								echo '<option>' . $l['nome'] . '</option>';
 							}
 							?>
 						</select>
@@ -159,17 +159,20 @@
 		function addCampo(tit){
 			$( "#myModalLabel" ).text(tit);
 		}
-		var campo = $('#myModalLabel').text();
-		var valor = $('.novoCadastro').val();
 
 		$('.cadastrar').click(function(){
+			var campo = $('#myModalLabel').text();
+			var valor = $('.novoCadastro').val();
+
 			$.ajax({
 				type: 'POST',
-				data: {campo : valor},
+				data: {campo : campo, valor : valor},
 				url:'processa.php',
 			}).done(function( msg ) {
-				alert( "Data Saved: " + msg );
-			}).fail(function(s) {
+
+				alert( msg );
+
+			}).fail(function() {
 				alert( "Ocorreram erros ao salvar" );
 			});
 		});

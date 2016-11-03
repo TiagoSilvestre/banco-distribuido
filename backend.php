@@ -11,13 +11,28 @@ function conexao(){
 }
 
 function executaQuery($sql){
-	$con = conexao();
-	//$query = 'INSERT INTO pessoas(nomePessoa, Logradouros_idLogradouro, Bairros_idBairro, Cidades_idCidade, Estados_idEstado, Paises_idPais) VALUES ({})';
-	$consulta = $con->prepare($sql);
-	$consulta->execute();
-	return $consulta->fetchAll();
+	try{
+		$con = conexao();
+		$consulta = $con->prepare($sql);
+		$consulta->execute();
+		return $consulta->fetchAll();
+	}catch (Exception $e){
+		echo $e->getMessage();
+	}
+
 }
 
+
+function insertQuery($sql){
+	try{
+		$con = conexao();
+		$consulta = $con->prepare($sql);
+		$consulta->execute();
+	}catch (Exception $e){
+		echo $e->getMessage();
+	}
+
+}
 
 
 ?>
