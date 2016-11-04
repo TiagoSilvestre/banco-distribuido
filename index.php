@@ -14,7 +14,7 @@
 		<div class="container">
 			<p style="text-align: center;font-size: 23px;"><u></u></p>
 
-			<form method="POST" action="">
+			<form method="POST" action="cadastra.php">
 				<div class="contint">
 					<div class="flr">
 						<p>Codigo:</p>
@@ -64,13 +64,13 @@
 					<div>
 						<select name="Bairros_idBairro">
 							<?php
-							$logr = executaQuery('SELECT * FROM bairros');
-							foreach ($logr as $l){
+							$bai = executaQuery('SELECT * FROM bairros');
+							foreach ($bai as $l){
 								echo '<option>' . $l['nome'] . '</option>';
 							}
 							?>
 						</select>
-						<a href="#" class="btn brn-sm btn-info">+</a>
+						<a href="#" class="btn brn-sm btn-info" data-toggle="modal" data-target="#myModal" onclick="addCampo('Adicionar Bairro')">+</a>
 						<br><br>
 					</div>
 				</div>
@@ -82,12 +82,15 @@
 
 					<div>
 						<select name="Cidades_idCidade">
-							<option>Milk</option>
-							<option>Coffee</option>
-							<option>Tea</option>
+							<?php
+							$logr = executaQuery('SELECT * FROM cidades');
+							foreach ($logr as $l){
+								echo '<option>' . $l['nome'] . '</option>';
+							}
+							?>
 						</select>
 
-						<a href="#" class="btn brn-sm btn-info">+</a>
+						<a href="#" class="btn brn-sm btn-info" data-toggle="modal" data-target="#myModal" onclick="addCampo('Adicionar Cidade')">+</a>
 						<br><br>
 					</div>
 				</div>
@@ -99,11 +102,14 @@
 
 					<div>
 						<select name="Estados_idEstado">
-							<option>Milk</option>
-							<option>Coffee</option>
-							<option>Tea</option>
+							<?php
+							$est = executaQuery('SELECT * FROM estados');
+							foreach ($est as $l){
+								echo '<option>' . $l['nome'] . '</option>';
+							}
+							?>
 						</select>
-						<a href="#" class="btn brn-sm btn-info">+</a>
+						<a href="#" class="btn brn-sm btn-info" data-toggle="modal" data-target="#myModal" onclick="addCampo('Adicionar Estado')">+</a>
 						<br><br>
 					</div>
 				</div>
@@ -114,28 +120,26 @@
 					</div>
 
 					<div>
-						<!--<input type="text" name="Paises_idPais" />-->
 						<select name="Paises_idPais">
-							<option>Milk</option>
-							<option>Coffee</option>
-							<option>Tea</option>
+							<?php
+							$paises = executaQuery('SELECT * FROM paises');
+							foreach ($paises as $l){
+								echo '<option>' . $l['nome'] . '</option>';
+							}
+							?>
 						</select>
-						<a href="#" class="btn brn-sm btn-info">+</a>
+						<a href="#" class="btn brn-sm btn-info"  data-toggle="modal" data-target="#myModal" onclick="addCampo('Adicionar Pais')">+</a>
 						<br><br>
 					</div>
 				</div>
 
 				<input type="Submit" class="btn brn-sm btn-primary" name="operacao" value="Inclusão">
-				<input type="Submit" class="btn brn-sm btn-primary" name="operacao" value="Alteração">
-				<input type="Submit" class="btn brn-sm btn-primary" name="operacao" value="Consultar">
+<!--				<input type="Submit" class="btn brn-sm btn-primary" name="operacao" value="Alteração">-->
+<!--				<input type="Submit" class="btn brn-sm btn-primary" name="operacao" value="Consultar">-->
 			</form>
 		</div>
-	<!-- Button trigger modal
-	<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
-		+
-	</button>-->
 
-	<!-- Modal -->
+	<!--***********************  MODAL  ***********************-->
 		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
 			<div class="modal-dialog" role="document">
 				<div class="modal-content">
@@ -147,7 +151,7 @@
 						<input type="text" name="novoCadastro" class="novoCadastro"/>
 					</div>
 					<div class="modal-footer">
-						<button type="button" class="btn btn-primary cadastrar" data-dismiss="modal">Cadastrar</button>
+						<button type="button" class="btn btn-primary cadastrar" data-dismiss="modal" onclick="$('#myModalLabel').text()">Cadastrar</button>
 						<!--<button type="button" class="btn btn-primary">Cadastrar</button>-->
 					</div>
 				</div>
@@ -155,53 +159,6 @@
 		</div>
 
 
-	<script>
-		function addCampo(tit){
-			$( "#myModalLabel" ).text(tit);
-		}
-
-		$('.cadastrar').click(function(){
-			var campo = $('#myModalLabel').text();
-			var valor = $('.novoCadastro').val();
-
-			$.ajax({
-				type: 'POST',
-				data: {campo : campo, valor : valor},
-				url:'processa.php',
-			}).done(function( msg ) {
-
-				alert( msg );
-
-			}).fail(function() {
-				alert( "Ocorreram erros ao salvar" );
-			});
-		});
-
-	</script>
+	<script src="js/script.js"></script>
 	</body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<?php
-echo "<pre>";
-print_r($_POST);
-echo "</pre>";
-if(!empty($_POST['codigo']) && !empty($_POST['nomePessoa'])){
-	echo "tem";
-}
-
-?>

@@ -20,6 +20,26 @@
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
   </component>
+  <component name="DockManager">
+    <window id="1">
+      <content type="file-editors">
+        <state>
+          <leaf>
+            <file leaf-file-name="script.js" pinned="false" current-in-tab="true">
+              <entry file="file://$PROJECT_DIR$/js/script.js">
+                <provider selected="true" editor-type-id="text-editor">
+                  <state relative-caret-position="136">
+                    <caret line="26" column="53" selection-start-line="26" selection-start-column="53" selection-end-line="26" selection-end-column="53" />
+                    <folding />
+                  </state>
+                </provider>
+              </entry>
+            </file>
+          </leaf>
+        </state>
+      </content>
+    </window>
+  </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
     <favorites_list name="trabalhoBanco" />
@@ -29,11 +49,48 @@
       <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="165" column="0" selection-start-line="165" selection-start-column="0" selection-end-line="165" selection-end-column="0" />
+            <state relative-caret-position="200">
+              <caret line="134" column="0" selection-start-line="134" selection-start-column="0" selection-end-line="134" selection-end-column="0" />
               <folding>
-                <marker date="1478176307563" expanded="true" signature="970:995" ph="SELECT * FRO... logradouros" />
-                <marker date="1478176307563" expanded="true" signature="1472:1493" ph="SELECT * FRO... bairros" />
+                <marker date="1478283724447" expanded="true" signature="982:1007" ph="SELECT * FRO... logradouros" />
+                <marker date="1478283724447" expanded="true" signature="1483:1504" ph="SELECT * FRO... bairros" />
+                <marker date="1478283724447" expanded="true" signature="1972:1993" ph="SELECT * FRO... cidades" />
+                <marker date="1478283724447" expanded="true" signature="2462:2483" ph="SELECT * FRO... estados" />
+                <marker date="1478283724447" expanded="true" signature="2950:2970" ph="SELECT * FRO... paises" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="cadastra.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cadastra.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="49" column="21" selection-start-line="49" selection-start-column="21" selection-end-line="49" selection-end-column="21" />
+              <folding>
+                <marker date="1478282621228" expanded="true" signature="408:459" ph="SELECT idLog... logradouros" />
+                <marker date="1478282621228" expanded="true" signature="408:473" ph="SELECT idLog... logradouros" />
+                <marker date="1478282621228" expanded="true" signature="565:586" ph="SELECT idBai... " />
+                <marker date="1478282621228" expanded="true" signature="565:618" ph="SELECT idBai... logradouros" />
+                <marker date="1478282621228" expanded="true" signature="712:765" ph="SELECT idCid... cidades" />
+                <marker date="1478282621228" expanded="true" signature="859:912" ph="SELECT idEst... estados" />
+                <marker date="1478282621228" expanded="true" signature="1002:1050" ph="SELECT idEst... paises" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="processa.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/processa.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="7" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+              <folding>
+                <marker date="1478275984938" expanded="true" signature="160:172" ph="INSERT INTO $... " />
+                <marker date="1478275984938" expanded="true" signature="160:181" ph="INSERT INTO " />
+                <marker date="1478275984938" expanded="true" signature="160:194" ph="INSERT INTO $... " />
+                <marker date="1478275984938" expanded="true" signature="160:195" ph="INSERT INTO $... " />
+                <marker date="1478275984938" expanded="true" signature="160:206" ph="INSERT INTO $... " />
               </folding>
             </state>
           </provider>
@@ -42,25 +99,9 @@
       <file leaf-file-name="backend.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/backend.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="384">
-              <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+            <state relative-caret-position="63">
+              <caret line="12" column="21" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="21" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="processa.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/processa.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-              <folding>
-                <marker date="1478175950985" expanded="true" signature="174:186" ph="INSERT INTO $... " />
-                <marker date="1478175950985" expanded="true" signature="174:198" ph="INSERT INTO " />
-                <marker date="1478175950985" expanded="true" signature="174:211" ph="INSERT INTO $... " />
-                <marker date="1478175950985" expanded="true" signature="174:212" ph="INSERT INTO $... " />
-                <marker date="1478175950985" expanded="true" signature="174:223" ph="INSERT INTO $... " />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -68,8 +109,8 @@
       <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="20" column="16" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="16" />
+            <state relative-caret-position="306">
+              <caret line="18" column="1" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -93,8 +134,10 @@
         <option value="$PROJECT_DIR$/css/bootstrap.min.css" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/css/style.css" />
-        <option value="$PROJECT_DIR$/backend.php" />
         <option value="$PROJECT_DIR$/processa.php" />
+        <option value="$PROJECT_DIR$/backend.php" />
+        <option value="$PROJECT_DIR$/js/script.js" />
+        <option value="$PROJECT_DIR$/cadastra.php" />
         <option value="$PROJECT_DIR$/index.php" />
       </list>
     </option>
@@ -137,6 +180,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -157,7 +201,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="Scratches" />
     </panes>
   </component>
@@ -231,12 +274,15 @@
       <workItem from="1477927811974" duration="6791000" />
       <workItem from="1477950313369" duration="4961000" />
       <workItem from="1477998056399" duration="3186000" />
-      <workItem from="1478170385185" duration="5664000" />
+      <workItem from="1478170385185" duration="10503000" />
+      <workItem from="1478187181583" duration="60000" />
+      <workItem from="1478255149877" duration="1410000" />
+      <workItem from="1478273408693" duration="10896000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="36518000" />
+    <option name="totallyTimeSpent" value="53723000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -273,7 +319,9 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
@@ -282,8 +330,77 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1478176307563" expanded="true" signature="970:995" ph="SELECT * FRO... logradouros" />
-            <marker date="1478176307563" expanded="true" signature="1472:1493" ph="SELECT * FRO... bairros" />
+            <marker date="1478283724447" expanded="true" signature="982:1007" ph="SELECT * FRO... logradouros" />
+            <marker date="1478283724447" expanded="true" signature="1483:1504" ph="SELECT * FRO... bairros" />
+            <marker date="1478283724447" expanded="true" signature="1972:1993" ph="SELECT * FRO... cidades" />
+            <marker date="1478283724447" expanded="true" signature="2462:2483" ph="SELECT * FRO... estados" />
+            <marker date="1478283724447" expanded="true" signature="2950:2970" ph="SELECT * FRO... paises" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="1" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1478283724447" expanded="true" signature="982:1007" ph="SELECT * FRO... logradouros" />
+            <marker date="1478283724447" expanded="true" signature="1483:1504" ph="SELECT * FRO... bairros" />
+            <marker date="1478283724447" expanded="true" signature="1972:1993" ph="SELECT * FRO... cidades" />
+            <marker date="1478283724447" expanded="true" signature="2462:2483" ph="SELECT * FRO... estados" />
+            <marker date="1478283724447" expanded="true" signature="2950:2970" ph="SELECT * FRO... paises" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="1" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1478283724447" expanded="true" signature="982:1007" ph="SELECT * FRO... logradouros" />
+            <marker date="1478283724447" expanded="true" signature="1483:1504" ph="SELECT * FRO... bairros" />
+            <marker date="1478283724447" expanded="true" signature="1972:1993" ph="SELECT * FRO... cidades" />
+            <marker date="1478283724447" expanded="true" signature="2462:2483" ph="SELECT * FRO... estados" />
+            <marker date="1478283724447" expanded="true" signature="2950:2970" ph="SELECT * FRO... paises" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="1" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1478283724447" expanded="true" signature="982:1007" ph="SELECT * FRO... logradouros" />
+            <marker date="1478283724447" expanded="true" signature="1483:1504" ph="SELECT * FRO... bairros" />
+            <marker date="1478283724447" expanded="true" signature="1972:1993" ph="SELECT * FRO... cidades" />
+            <marker date="1478283724447" expanded="true" signature="2462:2483" ph="SELECT * FRO... estados" />
+            <marker date="1478283724447" expanded="true" signature="2950:2970" ph="SELECT * FRO... paises" />
           </folding>
         </state>
       </provider>
@@ -293,11 +410,11 @@
         <state relative-caret-position="119">
           <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
           <folding>
-            <marker date="1478175950985" expanded="true" signature="174:186" ph="INSERT INTO $... " />
-            <marker date="1478175950985" expanded="true" signature="174:198" ph="INSERT INTO " />
-            <marker date="1478175950985" expanded="true" signature="174:211" ph="INSERT INTO $... " />
-            <marker date="1478175950985" expanded="true" signature="174:212" ph="INSERT INTO $... " />
-            <marker date="1478175950985" expanded="true" signature="174:223" ph="INSERT INTO $... " />
+            <marker date="1478275984938" expanded="true" signature="160:172" ph="INSERT INTO $... " />
+            <marker date="1478275984938" expanded="true" signature="160:181" ph="INSERT INTO " />
+            <marker date="1478275984938" expanded="true" signature="160:194" ph="INSERT INTO $... " />
+            <marker date="1478275984938" expanded="true" signature="160:195" ph="INSERT INTO $... " />
+            <marker date="1478275984938" expanded="true" signature="160:206" ph="INSERT INTO $... " />
           </folding>
         </state>
       </provider>
@@ -323,8 +440,11 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1478176307563" expanded="true" signature="970:995" ph="SELECT * FRO... logradouros" />
-            <marker date="1478176307563" expanded="true" signature="1472:1493" ph="SELECT * FRO... bairros" />
+            <marker date="1478283724447" expanded="true" signature="982:1007" ph="SELECT * FRO... logradouros" />
+            <marker date="1478283724447" expanded="true" signature="1483:1504" ph="SELECT * FRO... bairros" />
+            <marker date="1478283724447" expanded="true" signature="1972:1993" ph="SELECT * FRO... cidades" />
+            <marker date="1478283724447" expanded="true" signature="2462:2483" ph="SELECT * FRO... estados" />
+            <marker date="1478283724447" expanded="true" signature="2950:2970" ph="SELECT * FRO... paises" />
           </folding>
         </state>
       </provider>
@@ -334,11 +454,11 @@
         <state relative-caret-position="119">
           <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
           <folding>
-            <marker date="1478175950985" expanded="true" signature="174:186" ph="INSERT INTO $... " />
-            <marker date="1478175950985" expanded="true" signature="174:198" ph="INSERT INTO " />
-            <marker date="1478175950985" expanded="true" signature="174:211" ph="INSERT INTO $... " />
-            <marker date="1478175950985" expanded="true" signature="174:212" ph="INSERT INTO $... " />
-            <marker date="1478175950985" expanded="true" signature="174:223" ph="INSERT INTO $... " />
+            <marker date="1478275984938" expanded="true" signature="160:172" ph="INSERT INTO $... " />
+            <marker date="1478275984938" expanded="true" signature="160:181" ph="INSERT INTO " />
+            <marker date="1478275984938" expanded="true" signature="160:194" ph="INSERT INTO $... " />
+            <marker date="1478275984938" expanded="true" signature="160:195" ph="INSERT INTO $... " />
+            <marker date="1478275984938" expanded="true" signature="160:206" ph="INSERT INTO $... " />
           </folding>
         </state>
       </provider>
@@ -364,8 +484,11 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1478176307563" expanded="true" signature="970:995" ph="SELECT * FRO... logradouros" />
-            <marker date="1478176307563" expanded="true" signature="1472:1493" ph="SELECT * FRO... bairros" />
+            <marker date="1478283724447" expanded="true" signature="982:1007" ph="SELECT * FRO... logradouros" />
+            <marker date="1478283724447" expanded="true" signature="1483:1504" ph="SELECT * FRO... bairros" />
+            <marker date="1478283724447" expanded="true" signature="1972:1993" ph="SELECT * FRO... cidades" />
+            <marker date="1478283724447" expanded="true" signature="2462:2483" ph="SELECT * FRO... estados" />
+            <marker date="1478283724447" expanded="true" signature="2950:2970" ph="SELECT * FRO... paises" />
           </folding>
         </state>
       </provider>
@@ -391,8 +514,11 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1478176307563" expanded="true" signature="970:995" ph="SELECT * FRO... logradouros" />
-            <marker date="1478176307563" expanded="true" signature="1472:1493" ph="SELECT * FRO... bairros" />
+            <marker date="1478283724447" expanded="true" signature="982:1007" ph="SELECT * FRO... logradouros" />
+            <marker date="1478283724447" expanded="true" signature="1483:1504" ph="SELECT * FRO... bairros" />
+            <marker date="1478283724447" expanded="true" signature="1972:1993" ph="SELECT * FRO... cidades" />
+            <marker date="1478283724447" expanded="true" signature="2462:2483" ph="SELECT * FRO... estados" />
+            <marker date="1478283724447" expanded="true" signature="2950:2970" ph="SELECT * FRO... paises" />
           </folding>
         </state>
       </provider>
@@ -418,8 +544,11 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1478176307563" expanded="true" signature="970:995" ph="SELECT * FRO... logradouros" />
-            <marker date="1478176307563" expanded="true" signature="1472:1493" ph="SELECT * FRO... bairros" />
+            <marker date="1478283724447" expanded="true" signature="982:1007" ph="SELECT * FRO... logradouros" />
+            <marker date="1478283724447" expanded="true" signature="1483:1504" ph="SELECT * FRO... bairros" />
+            <marker date="1478283724447" expanded="true" signature="1972:1993" ph="SELECT * FRO... cidades" />
+            <marker date="1478283724447" expanded="true" signature="2462:2483" ph="SELECT * FRO... estados" />
+            <marker date="1478283724447" expanded="true" signature="2950:2970" ph="SELECT * FRO... paises" />
           </folding>
         </state>
       </provider>
@@ -440,41 +569,68 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="16" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="16" />
+        <state relative-caret-position="306">
+          <caret line="18" column="1" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/processa.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+        <state relative-caret-position="119">
+          <caret line="7" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
           <folding>
-            <marker date="1478175950985" expanded="true" signature="174:186" ph="INSERT INTO $... " />
-            <marker date="1478175950985" expanded="true" signature="174:198" ph="INSERT INTO " />
-            <marker date="1478175950985" expanded="true" signature="174:211" ph="INSERT INTO $... " />
-            <marker date="1478175950985" expanded="true" signature="174:212" ph="INSERT INTO $... " />
-            <marker date="1478175950985" expanded="true" signature="174:223" ph="INSERT INTO $... " />
+            <marker date="1478275984938" expanded="true" signature="160:172" ph="INSERT INTO $... " />
+            <marker date="1478275984938" expanded="true" signature="160:181" ph="INSERT INTO " />
+            <marker date="1478275984938" expanded="true" signature="160:194" ph="INSERT INTO $... " />
+            <marker date="1478275984938" expanded="true" signature="160:195" ph="INSERT INTO $... " />
+            <marker date="1478275984938" expanded="true" signature="160:206" ph="INSERT INTO $... " />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/backend.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+        <state relative-caret-position="63">
+          <caret line="12" column="21" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cadastra.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="49" column="21" selection-start-line="49" selection-start-column="21" selection-end-line="49" selection-end-column="21" />
+          <folding>
+            <marker date="1478282621228" expanded="true" signature="408:459" ph="SELECT idLog... logradouros" />
+            <marker date="1478282621228" expanded="true" signature="408:473" ph="SELECT idLog... logradouros" />
+            <marker date="1478282621228" expanded="true" signature="565:586" ph="SELECT idBai... " />
+            <marker date="1478282621228" expanded="true" signature="565:618" ph="SELECT idBai... logradouros" />
+            <marker date="1478282621228" expanded="true" signature="712:765" ph="SELECT idCid... cidades" />
+            <marker date="1478282621228" expanded="true" signature="859:912" ph="SELECT idEst... estados" />
+            <marker date="1478282621228" expanded="true" signature="1002:1050" ph="SELECT idEst... paises" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/script.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="26" column="53" selection-start-line="26" selection-start-column="53" selection-end-line="26" selection-end-column="53" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="165" column="0" selection-start-line="165" selection-start-column="0" selection-end-line="165" selection-end-column="0" />
+        <state relative-caret-position="200">
+          <caret line="134" column="0" selection-start-line="134" selection-start-column="0" selection-end-line="134" selection-end-column="0" />
           <folding>
-            <marker date="1478176307563" expanded="true" signature="970:995" ph="SELECT * FRO... logradouros" />
-            <marker date="1478176307563" expanded="true" signature="1472:1493" ph="SELECT * FRO... bairros" />
+            <marker date="1478283724447" expanded="true" signature="982:1007" ph="SELECT * FRO... logradouros" />
+            <marker date="1478283724447" expanded="true" signature="1483:1504" ph="SELECT * FRO... bairros" />
+            <marker date="1478283724447" expanded="true" signature="1972:1993" ph="SELECT * FRO... cidades" />
+            <marker date="1478283724447" expanded="true" signature="2462:2483" ph="SELECT * FRO... estados" />
+            <marker date="1478283724447" expanded="true" signature="2950:2970" ph="SELECT * FRO... paises" />
           </folding>
         </state>
       </provider>

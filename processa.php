@@ -6,10 +6,10 @@
  */
 require 'backend.php';
 
-$tabela = explode(" ", $_POST['campo']);
+$tabela = $_POST['campo'];
 $valor = $_POST['valor'];
 
-$sql = "INSERT INTO {$tabela[1]}(nome) VALUES('{$valor}')";
+$sql = "INSERT INTO {$tabela}(nome) VALUES('{$valor}')";
 
 executaQuery($sql);
 

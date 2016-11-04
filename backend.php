@@ -19,7 +19,6 @@ function executaQuery($sql){
 	}catch (Exception $e){
 		echo $e->getMessage();
 	}
-
 }
 
 
