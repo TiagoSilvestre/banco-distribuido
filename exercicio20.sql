@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.5.1
--- http://www.phpmyadmin.net
+-- version 4.6.4
+-- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 07-Nov-2016 às 16:46
--- Versão do servidor: 10.1.16-MariaDB
--- PHP Version: 5.6.24
+-- Generation Time: 08-Nov-2016 às 13:35
+-- Versão do servidor: 5.7.14
+-- PHP Version: 5.6.25
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -99,6 +99,27 @@ INSERT INTO `logradouros` (`idLogradouro`, `nome`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Estrutura da tabela `movimentos`
+--
+
+CREATE TABLE `movimentos` (
+  `idMovimento` int(11) NOT NULL,
+  `OperacaoMovimento` varchar(50) DEFAULT NULL,
+  `siteMovimento` int(11) DEFAULT NULL,
+  `dataMovimento` datetime DEFAULT NULL,
+  `Pessoas_idPessoa` int(11) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Extraindo dados da tabela `movimentos`
+--
+
+INSERT INTO `movimentos` (`idMovimento`, `OperacaoMovimento`, `siteMovimento`, `dataMovimento`, `Pessoas_idPessoa`) VALUES
+(1, 'INSERT', 1, '2016-11-08 11:24:12', 18);
+
+-- --------------------------------------------------------
+
+--
 -- Estrutura da tabela `paises`
 --
 
@@ -135,10 +156,10 @@ CREATE TABLE `pessoas` (
 --
 
 INSERT INTO `pessoas` (`idPessoa`, `nomePessoa`, `Logradouros_idLogradouro`, `Bairros_idBairro`, `Cidades_idCidade`, `Estados_idEstado`, `Paises_idPais`) VALUES
-(1, 'Tiago', 1, 1, 1, 1, 1),
-(2, 'Jose', 2, 2, 1, 1, 1),
-(3, 'Jose', 2, 2, 1, 1, 1),
-(4, 'Jeison', 1, 1, 1, 1, 1);
+(16, 'kkkkk', 1, 1, 1, 1, 1),
+(17, 'jaaabulani', 2, 2, 1, 1, 1),
+(18, 'tatatata2', 1, 1, 1, 1, 1),
+(19, 'jailtons', 1, 1, 1, 1, 1);
 
 --
 -- Indexes for dumped tables
@@ -167,6 +188,13 @@ ALTER TABLE `estados`
 --
 ALTER TABLE `logradouros`
   ADD PRIMARY KEY (`idLogradouro`);
+
+--
+-- Indexes for table `movimentos`
+--
+ALTER TABLE `movimentos`
+  ADD PRIMARY KEY (`idMovimento`),
+  ADD KEY `Pessoas_idPessoa` (`Pessoas_idPessoa`);
 
 --
 -- Indexes for table `paises`
@@ -210,6 +238,11 @@ ALTER TABLE `estados`
 ALTER TABLE `logradouros`
   MODIFY `idLogradouro` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 --
+-- AUTO_INCREMENT for table `movimentos`
+--
+ALTER TABLE `movimentos`
+  MODIFY `idMovimento` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+--
 -- AUTO_INCREMENT for table `paises`
 --
 ALTER TABLE `paises`
@@ -218,7 +251,7 @@ ALTER TABLE `paises`
 -- AUTO_INCREMENT for table `pessoas`
 --
 ALTER TABLE `pessoas`
-  MODIFY `idPessoa` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `idPessoa` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 --
 -- Constraints for dumped tables
 --

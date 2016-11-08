@@ -12,7 +12,7 @@
 	<body>
 	<?php require "backend.php";?>
 		<div class="container">
-			<p style="text-align: center;font-size: 23px;"><u>Cadastro de Pessoas</u></p>
+			<p style="text-align: center;font-size: 23px;"><u></u></p>
 
 			<form method="POST" action="cadastra.php">
 				<div class="contint">
