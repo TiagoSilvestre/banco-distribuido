@@ -17,18 +17,20 @@ $('.cadastrar').click(function(){
     }else if(campo == "Adicionar Pais"){
         pais(valor);
     }
-
 });
 
 /**********   LOGRADOROS       *********/
+
 function logradouros(value){
+    $('.processando').css('display', 'block')
     $.ajax({
         type: 'POST',
         data: {campo : 'logradouros', valor : value},
         url:'processa.php',
-    }).done(function( msg ) {
+    }).done(function() {
         $("select[name='Logradouros_idLogradouro']").append("<option>"+ value +"</option>");
-        alert( msg );
+        alert('Cadastrado com sucesso!');
+        $('.processando').css('display', 'none');
         $('.novoCadastro').val('');
 
     }).fail(function() {
@@ -38,64 +40,89 @@ function logradouros(value){
 
 
 /**********   BAIRROS       *********/
+
 function bairro(value){
+    $('.processando').css('display', 'block')
     $.ajax({
         type: 'POST',
         data: {campo : 'bairros', valor : value},
         url:'processa.php',
-    }).done(function( msg ) {
+    }).done(function() {
         $("select[name='Bairros_idBairro']").append("<option>"+ value +"</option>");
-        alert( msg );
+        alert('Cadastrado com sucesso!');
+        $('.processando').css('display', 'none');
         $('.novoCadastro').val('');
-
     }).fail(function() {
         alert( "Ocorreram erros ao salvar" );
     });
 }
 
 /**********   CIDADES       *********/
+
 function cidade(value){
+    $('.processando').css('display', 'block')
     $.ajax({
         type: 'POST',
         data: {campo : 'cidades', valor : value},
         url:'processa.php',
-    }).done(function( msg ) {
+    }).done(function() {
         $("select[name='Cidades_idCidade']").append("<option>"+ value +"</option>");
-        alert( msg );
+        alert('Cadastrado com sucesso');
+        $('.processando').css('display', 'none');
         $('.novoCadastro').val('');
-
     }).fail(function() {
         alert( "Ocorreram erros ao salvar" );
     });
 }
 
 /**********   ESTADOS       *********/
+
 function estado(value){
+    $('.processando').css('display', 'block')
     $.ajax({
         type: 'POST',
         data: {campo : 'estados', valor : value},
         url:'processa.php',
-    }).done(function( msg ) {
+    }).done(function() {
         $("select[name='Estados_idEstado']").append("<option>"+ value +"</option>");
-        alert( msg );
+        alert('Cadastrado com sucesso!');
+        $('.processando').css('display', 'none');
         $('.novoCadastro').val('');
-
     }).fail(function() {
         alert( "Ocorreram erros ao salvar" );
     });
 }
 
 /**********   PAISES       *********/
+
 function pais(value){
+    $('.processando').css('display', 'block');
     $.ajax({
         type: 'POST',
         data: {campo : 'paises', valor : value},
         url:'processa.php',
-    }).done(function( msg ) {
+    }).done(function() {
         $("select[name='Paises_idPais']").append("<option>"+ value +"</option>");
-        alert( msg );
+        alert('Cadastrado com sucesso!');
+        $('.processando').css('display', 'none');
         $('.novoCadastro').val('');
+    }).fail(function() {
+        alert( "Ocorreram erros ao salvar" );
+    });
+}
 
+/**********   CONSULTA DE DADOS       *********/
+
+function consultaPessoa(){
+    var codigo = $('input[name=codigo]').val();
+    var nome = $('input[name=nomePessoa]').val();
+
+    $.ajax({
+        type: 'POST',
+        data: {codigo : codigo, nome : nome},
+        url:'consulta.php',
+    }).done(function( msg ) {
+        alert( msg );
     }).fail(function() {
         alert( "Ocorreram erros ao salvar" );
     });

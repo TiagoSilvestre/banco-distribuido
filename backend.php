@@ -35,6 +35,16 @@ function executaQuery($sql){
 	}
 }
 
+function cadastroAuxRemoto($sql){
+	try{
+		$con = conexao_remota1();
+		$consulta = $con->prepare($sql);
+		$consulta->execute();
+	}catch (Exception $e){
+		echo $e->getMessage();
+	}
+}
+
 function insertQuery($sql){
 	try{
 		$aleatorio = rand(0, 2);
@@ -47,8 +57,8 @@ function insertQuery($sql){
 		}elseif ($aleatorio == 1) {
 			//primeiro em banco remoto 1
 			insertBancoRemoto1($sql);
-			insertMovimento($aleatorio);
 			insertBancoLocal($sql);
+			insertMovimento($aleatorio);
 		}elseif ($aleatorio == 2){
 			//conexao remoto 2
 			echo "cadastro no banco 2";
@@ -61,7 +71,7 @@ function insertQuery($sql){
 /********************     INSERE BANCOS RANDOMICOS     ********************/
 
 function insertBancoLocal($sql, $mov = null){
-	if($mov = null){
+	if(!$mov == 'teste'){
 		echo "<script>alert('Cadastrando no banco local')</script>";
 	}
 	$con = conexao();
@@ -84,7 +94,7 @@ function insertMovimento($banco){
 	$idPessoa = executaQuery($sqlPessoa);
 	$id = $idPessoa[0][0];
 	$sql = "INSERT INTO movimentos(OperacaoMovimento, siteMovimento, dataMovimento, Pessoas_idPessoa) VALUES ('INSERT',{$banco}, NOW(), $id)";
-	$mov = true;
+	$mov = 'teste';
 	insertBancoLocal($sql, $mov);
 
 

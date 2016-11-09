@@ -12,5 +12,6 @@ $valor = $_POST['valor'];
 $sql = "INSERT INTO {$tabela}(nome) VALUES('{$valor}')";
 
 executaQuery($sql);
+cadastroAuxRemoto($sql);
 
-echo "Cadastrado com sucesso!";
+//echo "Cadastrado com sucesso!";
