@@ -48,7 +48,7 @@
 							<?php
 								$logr = executaQuery('SELECT * FROM logradouros');
 								foreach ($logr as $l){
-									echo "<option value='". $l['idLogradouro'] ."'>" . $l['nome'] . '</option>';
+									echo "<option value='". $l['id'] ."'>" . $l['nome'] . '</option>';
 								}
 							?>
 						</select>
@@ -67,7 +67,7 @@
 							<?php
 							$bai = executaQuery('SELECT * FROM bairros');
 							foreach ($bai as $l){
-								echo "<option value='". $l['idBairro'] ."'>" . $l['nome'] . '</option>';
+								echo "<option value='". $l['id'] ."'>" . $l['nome'] . '</option>';
 							}
 							?>
 						</select>
@@ -86,7 +86,7 @@
 							<?php
 							$logr = executaQuery('SELECT * FROM cidades');
 							foreach ($logr as $l){
-								echo "<option value='". $l['idCidade'] ."'>" . $l['nome'] . '</option>';
+								echo "<option value='". $l['id'] ."'>" . $l['nome'] . '</option>';
 							}
 							?>
 						</select>
@@ -106,7 +106,7 @@
 							<?php
 							$est = executaQuery('SELECT * FROM estados');
 							foreach ($est as $l){
-								echo "<option value='". $l['idEstado'] ."'>" . $l['nome'] . '</option>';
+								echo "<option value='". $l['id'] ."'>" . $l['nome'] . '</option>';
 							}
 							?>
 						</select>
@@ -125,7 +125,7 @@
 							<?php
 							$paises = executaQuery('SELECT * FROM paises');
 							foreach ($paises as $l){
-								echo "<option value='". $l['idPais'] ."'>" . $l['nome'] . '</option>';
+								echo "<option value='". $l['id'] ."'>" . $l['nome'] . '</option>';
 							}
 							?>
 						</select>
@@ -134,8 +134,8 @@
 					</div>
 				</div>
 
-				<input type="Submit" class="btn brn-sm btn-primary" name="operacao" value="Inclusão">
-				<input type="Submit" class="btn brn-sm btn-primary" name="operacao" value="Alteração">
+				<input type="Submit" class="btn brn-sm btn-primary" name="operacao" value="Incluir">
+				<input type="Submit" class="btn brn-sm btn-primary" name="operacao" value="Alterar">
 				<input type="button" class="btn brn-sm btn-primary" name="operacao" value="Consultar" onclick="consultaPessoa();">
 			</form>
 		</div>

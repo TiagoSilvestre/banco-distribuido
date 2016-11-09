@@ -27,8 +27,9 @@ function logradouros(value){
         type: 'POST',
         data: {campo : 'logradouros', valor : value},
         url:'processa.php',
-    }).done(function() {
-        $("select[name='Logradouros_idLogradouro']").append("<option>"+ value +"</option>");
+    }).done(function(id) {
+        var lo = JSON.parse(id);
+        $("select[name='Logradouros_idLogradouro']").append("<option value='"+ lo['id'] +"'>"+ value +"</option>");
         alert('Cadastrado com sucesso!');
         $('.processando').css('display', 'none');
         $('.novoCadastro').val('');
@@ -47,8 +48,9 @@ function bairro(value){
         type: 'POST',
         data: {campo : 'bairros', valor : value},
         url:'processa.php',
-    }).done(function() {
-        $("select[name='Bairros_idBairro']").append("<option>"+ value +"</option>");
+    }).done(function(id) {
+        var lo = JSON.parse(id);
+        $("select[name='Bairros_idBairro']").append("<option value='"+ lo['id'] +"'>"+ value +"</option>");
         alert('Cadastrado com sucesso!');
         $('.processando').css('display', 'none');
         $('.novoCadastro').val('');
@@ -65,8 +67,9 @@ function cidade(value){
         type: 'POST',
         data: {campo : 'cidades', valor : value},
         url:'processa.php',
-    }).done(function() {
-        $("select[name='Cidades_idCidade']").append("<option>"+ value +"</option>");
+    }).done(function(id) {
+        var lo = JSON.parse(id);
+        $("select[name='Cidades_idCidade']").append("<option value='"+ lo['id'] +"'>"+ value +"</option>");
         alert('Cadastrado com sucesso');
         $('.processando').css('display', 'none');
         $('.novoCadastro').val('');
@@ -83,8 +86,9 @@ function estado(value){
         type: 'POST',
         data: {campo : 'estados', valor : value},
         url:'processa.php',
-    }).done(function() {
-        $("select[name='Estados_idEstado']").append("<option>"+ value +"</option>");
+    }).done(function(id) {
+        var lo = JSON.parse(id);
+        $("select[name='Estados_idEstado']").append("<option value='"+ lo['id'] +"'>"+ value +"</option>");
         alert('Cadastrado com sucesso!');
         $('.processando').css('display', 'none');
         $('.novoCadastro').val('');
@@ -101,8 +105,9 @@ function pais(value){
         type: 'POST',
         data: {campo : 'paises', valor : value},
         url:'processa.php',
-    }).done(function() {
-        $("select[name='Paises_idPais']").append("<option>"+ value +"</option>");
+    }).done(function(id) {
+        var lo = JSON.parse(id);
+        $("select[name='Paises_idPais']").append("<option value='"+ lo['id'] +"'>"+ value +"</option>");
         alert('Cadastrado com sucesso!');
         $('.processando').css('display', 'none');
         $('.novoCadastro').val('');

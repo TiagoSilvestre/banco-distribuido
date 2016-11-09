@@ -14,4 +14,9 @@ $sql = "INSERT INTO {$tabela}(nome) VALUES('{$valor}')";
 executaQuery($sql);
 cadastroAuxRemoto($sql);
 
-//echo "Cadastrado com sucesso!";
+$sqlSel = "SELECT id FROM {$tabela} WHERE  nome = '{$valor}'";
+$id = executaQuery($sqlSel);
+$retorno = array('id' => $id[0][0]);
+
+$a = json_encode($retorno);
+echo $a;

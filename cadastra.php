@@ -15,45 +15,29 @@ $cidade = $_POST["Cidades_idCidade"];
 $estado = $_POST["Estados_idEstado"];
 $pais = $_POST["Paises_idPais"];
 $op = $_POST["operacao"];
-/*
-//PEGA A CHAVE ESTRANGEIRA logradouro
-$queryLogra = "SELECT idLogradouro FROM logradouros WHERE nome = '{$logradouro}'";
-$idLogra = executaQuery($queryLogra);
-
-//PEGA A CHAVE ESTRANGEIRA bairro
-$queryBairro = "SELECT idBairro FROM bairros WHERE nome = '{$bairro}'";
-$idBairro = executaQuery($queryBairro);
-
-//PEGA A CHAVE ESTRANGEIRA cidade
-$queryCidade = "SELECT idCidade FROM cidades WHERE nome = '{$cidade}'";
-$idCidade = executaQuery($queryCidade);
-
-//PEGA A CHAVE ESTRANGEIRA estado
-$queryEstado = "SELECT idEstado FROM estados WHERE nome = '{$estado}'";
-$idEstado = executaQuery($queryEstado);
-
-//PEGA A CHAVE ESTRANGEIRA pais
-$queryPais = "SELECT idPais FROM paises WHERE nome = '{$pais}'";
-$idPais = executaQuery($queryPais);
 
 
-$a = $idLogra[0][0];
-$b = $idBairro[0][0];
-$c = $idCidade[0][0];
-$d = $idEstado[0][0];
-$e = $idPais[0][0];
+if($op == 'Incluir'){
+    $queryLocal = "INSERT INTO pessoas(nomePessoa, Logradouros_idLogradouro, Bairros_idBairro, Cidades_idCidade, Estados_idEstado, Paises_idPais)
+    VALUES ('{$nome}', $logradouro, $bairro, $cidade, $estado, $pais)";
+    $operacao = 'INSERT';
 
-$queryLocal = "INSERT INTO pessoas(nomePessoa, Logradouros_idLogradouro, Bairros_idBairro, Cidades_idCidade, Estados_idEstado, Paises_idPais)
-VALUES ('{$nome}', $a, $b, $c, $estado, $e)";
-*/
-$queryLocal = "INSERT INTO pessoas(nomePessoa, Logradouros_idLogradouro, Bairros_idBairro, Cidades_idCidade, Estados_idEstado, Paises_idPais)
-VALUES ('{$nome}', $logradouro, $bairro, $cidade, $estado, $pais)";
-
-
-try{
-    insertQuery($queryLocal);
-}catch (Exception $e){
-    echo $e->getMessage();
+    try{
+        insertQuery($queryLocal, $operacao);
+        echo "Cadastrado com sucesso<br><br><a href='index.php'>Voltar</a>";
+    }catch (Exception $e){
+        echo $e->getMessage();
+    }
 }
 
-echo "Cadastrado com sucesso<br><br><a href='index.php'>Voltar</a>";
+if($op == 'Alterar'){
+    $sqlUpdate = "UPDATE pessoas SET nomePessoa = '{$nome}', Logradouros_idLogradouro = $logradouro, Bairros_idBairro = $bairro, Cidades_idCidade = $cidade, Estados_idEstado = $estado, Paises_idPais = $pais WHERE idPessoa = $cod";
+    $operacao = 'UPDATE';
+
+    try{
+        insertQuery($sqlUpdate, $operacao, $cod);
+        echo "Atualizado com sucesso<br><br><a href='index.php'>Voltar</a>";
+    }catch (Exception $e){
+        echo $e->getMessage();
+    }
+}

@@ -45,20 +45,20 @@ function cadastroAuxRemoto($sql){
 	}
 }
 
-function insertQuery($sql){
+function insertQuery($sql, $operacao, $id = null){
 	try{
-		$aleatorio = rand(0, 2);
+		$aleatorio = rand(0, 1);
 		echo "<script>alert('Selecionando banco randomicamente')</script>";
 		if($aleatorio == 0) {
 			//Primeiro em banco local
 			insertBancoLocal($sql);
-			insertMovimento($aleatorio);
+			insertMovimento($aleatorio, $operacao, $id);
 			insertBancoRemoto1($sql);
 		}elseif ($aleatorio == 1) {
 			//primeiro em banco remoto 1
 			insertBancoRemoto1($sql);
 			insertBancoLocal($sql);
-			insertMovimento($aleatorio);
+			insertMovimento($aleatorio, $operacao, $id);
 		}elseif ($aleatorio == 2){
 			//conexao remoto 2
 			echo "cadastro no banco 2";
@@ -88,24 +88,16 @@ function insertBancoRemoto1($sql){
 
 /********************     CADASTRO DE MOVIMENTO     ********************/
 
-function insertMovimento($banco){
+function insertMovimento($banco, $operacao, $id = null){
 	echo "<script>alert('Gravando em Movimentos')</script>";
-	$sqlPessoa = "SELECT `idPessoa` FROM `pessoas` WHERE `idPessoa` = (select max(idPessoa) from pessoas)";
-	$idPessoa = executaQuery($sqlPessoa);
-	$id = $idPessoa[0][0];
-	$sql = "INSERT INTO movimentos(OperacaoMovimento, siteMovimento, dataMovimento, Pessoas_idPessoa) VALUES ('INSERT',{$banco}, NOW(), $id)";
+	if($operacao == "INSERT"){
+		$sqlPessoa = "SELECT `idPessoa` FROM `pessoas` WHERE `idPessoa` = (select max(idPessoa) from pessoas)";
+		$idPessoa = executaQuery($sqlPessoa);
+		$id = $idPessoa[0][0];
+	}
+	$sql = "INSERT INTO movimentos(OperacaoMovimento, siteMovimento, dataMovimento, Pessoas_idPessoa) VALUES ('{$operacao}',{$banco}, NOW(), $id)";
 	$mov = 'teste';
 	insertBancoLocal($sql, $mov);
-
-
 }
 
-
 ?>
-
-
-
-
-
-
-

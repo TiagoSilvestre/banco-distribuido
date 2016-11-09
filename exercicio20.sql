@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 08-Nov-2016 às 13:35
+-- Generation Time: 09-Nov-2016 às 19:15
 -- Versão do servidor: 5.7.14
 -- PHP Version: 5.6.25
 
@@ -27,17 +27,9 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `bairros` (
-  `idBairro` int(11) NOT NULL,
+  `id` int(11) NOT NULL,
   `nome` varchar(30) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Extraindo dados da tabela `bairros`
---
-
-INSERT INTO `bairros` (`idBairro`, `nome`) VALUES
-(1, 'Centro'),
-(2, 'Pinheirinho');
 
 -- --------------------------------------------------------
 
@@ -46,16 +38,9 @@ INSERT INTO `bairros` (`idBairro`, `nome`) VALUES
 --
 
 CREATE TABLE `cidades` (
-  `idCidade` int(11) NOT NULL,
+  `id` int(11) NOT NULL,
   `nome` varchar(30) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Extraindo dados da tabela `cidades`
---
-
-INSERT INTO `cidades` (`idCidade`, `nome`) VALUES
-(1, 'Criciuma');
 
 -- --------------------------------------------------------
 
@@ -64,16 +49,9 @@ INSERT INTO `cidades` (`idCidade`, `nome`) VALUES
 --
 
 CREATE TABLE `estados` (
-  `idEstado` int(11) NOT NULL,
+  `id` int(11) NOT NULL,
   `nome` varchar(30) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Extraindo dados da tabela `estados`
---
-
-INSERT INTO `estados` (`idEstado`, `nome`) VALUES
-(1, 'Santa Catarina');
 
 -- --------------------------------------------------------
 
@@ -82,19 +60,9 @@ INSERT INTO `estados` (`idEstado`, `nome`) VALUES
 --
 
 CREATE TABLE `logradouros` (
-  `idLogradouro` int(11) NOT NULL,
+  `id` int(11) NOT NULL,
   `nome` varchar(30) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Extraindo dados da tabela `logradouros`
---
-
-INSERT INTO `logradouros` (`idLogradouro`, `nome`) VALUES
-(1, 'Av. Centenario'),
-(2, 'Rua Humberto de Campos'),
-(19, 'Rua Antonio de Lucca'),
-(20, 'Av. Julio');
 
 -- --------------------------------------------------------
 
@@ -110,13 +78,6 @@ CREATE TABLE `movimentos` (
   `Pessoas_idPessoa` int(11) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
---
--- Extraindo dados da tabela `movimentos`
---
-
-INSERT INTO `movimentos` (`idMovimento`, `OperacaoMovimento`, `siteMovimento`, `dataMovimento`, `Pessoas_idPessoa`) VALUES
-(1, 'INSERT', 1, '2016-11-08 11:24:12', 18);
-
 -- --------------------------------------------------------
 
 --
@@ -124,16 +85,9 @@ INSERT INTO `movimentos` (`idMovimento`, `OperacaoMovimento`, `siteMovimento`, `
 --
 
 CREATE TABLE `paises` (
-  `idPais` int(11) NOT NULL,
+  `id` int(11) NOT NULL,
   `nome` varchar(30) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Extraindo dados da tabela `paises`
---
-
-INSERT INTO `paises` (`idPais`, `nome`) VALUES
-(1, 'Brasil');
 
 -- --------------------------------------------------------
 
@@ -152,16 +106,6 @@ CREATE TABLE `pessoas` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Extraindo dados da tabela `pessoas`
---
-
-INSERT INTO `pessoas` (`idPessoa`, `nomePessoa`, `Logradouros_idLogradouro`, `Bairros_idBairro`, `Cidades_idCidade`, `Estados_idEstado`, `Paises_idPais`) VALUES
-(16, 'kkkkk', 1, 1, 1, 1, 1),
-(17, 'jaaabulani', 2, 2, 1, 1, 1),
-(18, 'tatatata2', 1, 1, 1, 1, 1),
-(19, 'jailtons', 1, 1, 1, 1, 1);
-
---
 -- Indexes for dumped tables
 --
 
@@ -169,25 +113,25 @@ INSERT INTO `pessoas` (`idPessoa`, `nomePessoa`, `Logradouros_idLogradouro`, `Ba
 -- Indexes for table `bairros`
 --
 ALTER TABLE `bairros`
-  ADD PRIMARY KEY (`idBairro`);
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `cidades`
 --
 ALTER TABLE `cidades`
-  ADD PRIMARY KEY (`idCidade`);
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `estados`
 --
 ALTER TABLE `estados`
-  ADD PRIMARY KEY (`idEstado`);
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `logradouros`
 --
 ALTER TABLE `logradouros`
-  ADD PRIMARY KEY (`idLogradouro`);
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `movimentos`
@@ -200,7 +144,7 @@ ALTER TABLE `movimentos`
 -- Indexes for table `paises`
 --
 ALTER TABLE `paises`
-  ADD PRIMARY KEY (`idPais`);
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `pessoas`
@@ -221,37 +165,37 @@ ALTER TABLE `pessoas`
 -- AUTO_INCREMENT for table `bairros`
 --
 ALTER TABLE `bairros`
-  MODIFY `idBairro` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT for table `cidades`
 --
 ALTER TABLE `cidades`
-  MODIFY `idCidade` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 --
 -- AUTO_INCREMENT for table `estados`
 --
 ALTER TABLE `estados`
-  MODIFY `idEstado` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT for table `logradouros`
 --
 ALTER TABLE `logradouros`
-  MODIFY `idLogradouro` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
 --
 -- AUTO_INCREMENT for table `movimentos`
 --
 ALTER TABLE `movimentos`
-  MODIFY `idMovimento` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `idMovimento` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 --
 -- AUTO_INCREMENT for table `paises`
 --
 ALTER TABLE `paises`
-  MODIFY `idPais` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 --
 -- AUTO_INCREMENT for table `pessoas`
 --
 ALTER TABLE `pessoas`
-  MODIFY `idPessoa` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `idPessoa` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 --
 -- Constraints for dumped tables
 --
@@ -260,11 +204,11 @@ ALTER TABLE `pessoas`
 -- Limitadores para a tabela `pessoas`
 --
 ALTER TABLE `pessoas`
-  ADD CONSTRAINT `pessoas_ibfk_1` FOREIGN KEY (`Logradouros_idLogradouro`) REFERENCES `logradouros` (`idLogradouro`),
-  ADD CONSTRAINT `pessoas_ibfk_2` FOREIGN KEY (`Bairros_idBairro`) REFERENCES `bairros` (`idBairro`),
-  ADD CONSTRAINT `pessoas_ibfk_3` FOREIGN KEY (`Cidades_idCidade`) REFERENCES `cidades` (`idCidade`),
-  ADD CONSTRAINT `pessoas_ibfk_4` FOREIGN KEY (`Estados_idEstado`) REFERENCES `estados` (`idEstado`),
-  ADD CONSTRAINT `pessoas_ibfk_5` FOREIGN KEY (`Paises_idPais`) REFERENCES `paises` (`idPais`);
+  ADD CONSTRAINT `pessoas_ibfk_1` FOREIGN KEY (`Logradouros_idLogradouro`) REFERENCES `logradouros` (`id`),
+  ADD CONSTRAINT `pessoas_ibfk_2` FOREIGN KEY (`Bairros_idBairro`) REFERENCES `bairros` (`id`),
+  ADD CONSTRAINT `pessoas_ibfk_3` FOREIGN KEY (`Cidades_idCidade`) REFERENCES `cidades` (`id`),
+  ADD CONSTRAINT `pessoas_ibfk_4` FOREIGN KEY (`Estados_idEstado`) REFERENCES `estados` (`id`),
+  ADD CONSTRAINT `pessoas_ibfk_5` FOREIGN KEY (`Paises_idPais`) REFERENCES `paises` (`id`);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
