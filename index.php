@@ -44,7 +44,7 @@
 					</div>
 
 					<div>
-						<select name="Logradouros_idLogradouro">
+						<select name="Logradouros_idLogradouro" id="logradouro1">
 							<?php
 								$logr = executaQuery('SELECT * FROM logradouros');
 								foreach ($logr as $l){
@@ -63,7 +63,7 @@
 					</div>
 
 					<div>
-						<select name="Bairros_idBairro">
+						<select name="Bairros_idBairro" id="bairro1">
 							<?php
 							$bai = executaQuery('SELECT * FROM bairros');
 							foreach ($bai as $l){
@@ -82,7 +82,7 @@
 					</div>
 
 					<div>
-						<select name="Cidades_idCidade">
+						<select name="Cidades_idCidade" id="cidade1">
 							<?php
 							$logr = executaQuery('SELECT * FROM cidades');
 							foreach ($logr as $l){
@@ -102,7 +102,7 @@
 					</div>
 
 					<div>
-						<select name="Estados_idEstado">
+						<select name="Estados_idEstado" id="estado1">
 							<?php
 							$est = executaQuery('SELECT * FROM estados');
 							foreach ($est as $l){
@@ -121,7 +121,7 @@
 					</div>
 
 					<div>
-						<select name="Paises_idPais">
+						<select name="Paises_idPais" id="pais1">
 							<?php
 							$paises = executaQuery('SELECT * FROM paises');
 							foreach ($paises as $l){

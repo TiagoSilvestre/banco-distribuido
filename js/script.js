@@ -121,8 +121,14 @@ function consultaPessoa(){
         type: 'POST',
         data: {codigo : codigo, nome : nome},
         url:'consulta.php',
-    }).done(function( msg ) {
-        alert( msg );
+    }).done(function(retorno) {
+        var a = JSON.parse(retorno);
+        $("input[name='nomePessoa']").val(a['nome']);
+        $('select#logradouro1').val(a['logradouro']);
+        $('select#bairro1').val(a['bairro']);
+        $('select#cidade1').val(a['cidade']);
+        $('select#estado1').val(a['estado']);
+        $('select#pais1').val(a['pais']);
     }).fail(function() {
         alert( "Ocorreram erros ao salvar" );
     });

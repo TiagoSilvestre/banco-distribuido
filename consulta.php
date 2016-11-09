@@ -18,4 +18,5 @@ $retorno = array('id' => $a[0][0], 'nome' => $a[0][1], 'logradouro' => $a[0][2],
 //echo "<pre>";
 //print_r($retorno);
 
-echo json_encode($retorno);
+$a = json_encode($retorno);
+echo $a;
