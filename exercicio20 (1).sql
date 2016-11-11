@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 09-Nov-2016 às 19:15
+-- Generation Time: 11-Nov-2016 às 22:57
 -- Versão do servidor: 5.7.14
 -- PHP Version: 5.6.25
 
@@ -31,6 +31,14 @@ CREATE TABLE `bairros` (
   `nome` varchar(30) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Extraindo dados da tabela `bairros`
+--
+
+INSERT INTO `bairros` (`id`, `nome`) VALUES
+(1, 'Centro'),
+(2, 'Prospera');
+
 -- --------------------------------------------------------
 
 --
@@ -41,6 +49,14 @@ CREATE TABLE `cidades` (
   `id` int(11) NOT NULL,
   `nome` varchar(30) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Extraindo dados da tabela `cidades`
+--
+
+INSERT INTO `cidades` (`id`, `nome`) VALUES
+(1, 'Criciuma'),
+(2, 'Sao Paulo');
 
 -- --------------------------------------------------------
 
@@ -53,6 +69,14 @@ CREATE TABLE `estados` (
   `nome` varchar(30) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Extraindo dados da tabela `estados`
+--
+
+INSERT INTO `estados` (`id`, `nome`) VALUES
+(1, 'Santa Catarina'),
+(2, 'Sao Paulo');
+
 -- --------------------------------------------------------
 
 --
@@ -63,6 +87,15 @@ CREATE TABLE `logradouros` (
   `id` int(11) NOT NULL,
   `nome` varchar(30) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Extraindo dados da tabela `logradouros`
+--
+
+INSERT INTO `logradouros` (`id`, `nome`) VALUES
+(1, 'Avenida Centenario'),
+(2, 'Rua Humberto de Campos'),
+(3, 'Rua Imigrantes');
 
 -- --------------------------------------------------------
 
@@ -78,6 +111,21 @@ CREATE TABLE `movimentos` (
   `Pessoas_idPessoa` int(11) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
+--
+-- Extraindo dados da tabela `movimentos`
+--
+
+INSERT INTO `movimentos` (`idMovimento`, `OperacaoMovimento`, `siteMovimento`, `dataMovimento`, `Pessoas_idPessoa`) VALUES
+(1, 'INSERT', 1, '2016-11-11 20:25:22', 1),
+(2, 'INSERT', 2, '2016-11-11 20:26:45', 2),
+(3, 'UPDATE', 1, '2016-11-11 20:27:12', 2),
+(4, 'INSERT', 1, '2016-11-11 20:44:28', 3),
+(5, 'INSERT', 1, '2016-11-11 20:45:58', 4),
+(6, 'UPDATE', 2, '2016-11-11 20:49:05', 3),
+(7, 'INSERT', 1, '2016-11-11 20:51:46', 5),
+(8, 'INSERT', 1, '2016-11-11 20:52:17', 6),
+(9, 'INSERT', 2, '2016-11-11 20:52:33', 7);
+
 -- --------------------------------------------------------
 
 --
@@ -88,6 +136,13 @@ CREATE TABLE `paises` (
   `id` int(11) NOT NULL,
   `nome` varchar(30) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Extraindo dados da tabela `paises`
+--
+
+INSERT INTO `paises` (`id`, `nome`) VALUES
+(1, 'Brasil');
 
 -- --------------------------------------------------------
 
@@ -104,6 +159,19 @@ CREATE TABLE `pessoas` (
   `Estados_idEstado` int(11) NOT NULL,
   `Paises_idPais` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Extraindo dados da tabela `pessoas`
+--
+
+INSERT INTO `pessoas` (`idPessoa`, `nomePessoa`, `Logradouros_idLogradouro`, `Bairros_idBairro`, `Cidades_idCidade`, `Estados_idEstado`, `Paises_idPais`) VALUES
+(1, 'Tiago Silvestre', 1, 1, 1, 1, 1),
+(2, 'Jefferson da Silva', 2, 1, 1, 1, 1),
+(3, 'Paulo Cardoso', 1, 2, 1, 1, 1),
+(4, 'Paracelso', 3, 1, 2, 2, 1),
+(5, 'Mariana Fernandes', 3, 1, 1, 1, 1),
+(6, 'Fernanda Machdo', 1, 1, 1, 1, 1),
+(7, 'Leobardo', 1, 1, 1, 1, 1);
 
 --
 -- Indexes for dumped tables
@@ -165,37 +233,37 @@ ALTER TABLE `pessoas`
 -- AUTO_INCREMENT for table `bairros`
 --
 ALTER TABLE `bairros`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT for table `cidades`
 --
 ALTER TABLE `cidades`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT for table `estados`
 --
 ALTER TABLE `estados`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT for table `logradouros`
 --
 ALTER TABLE `logradouros`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT for table `movimentos`
 --
 ALTER TABLE `movimentos`
-  MODIFY `idMovimento` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `idMovimento` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 --
 -- AUTO_INCREMENT for table `paises`
 --
 ALTER TABLE `paises`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `pessoas`
 --
 ALTER TABLE `pessoas`
-  MODIFY `idPessoa` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `idPessoa` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 --
 -- Constraints for dumped tables
 --

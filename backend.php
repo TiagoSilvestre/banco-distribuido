@@ -15,12 +15,24 @@ function conexao(){
 //CONEXAO REMOTA 1
 function conexao_remota1(){
     try{
-        $con = new PDO('mysql:host=192.168.25.234;dbname=exercicio20', 'ts-PC', 'admin');
+        $con = new PDO('mysql:host=172.16.82.10;dbname=exercicio20', 'ts-PC', 'admin');
     }catch(Exception $e){
         echo $e->getMessage();
     }
     return $con;
 }
+
+//CONEXAO REMOTA 1
+function conexao_remota2(){
+    try{
+        $con = new PDO('mysql:host=172.16.82.11;dbname=exercicio20', 'ts-PC', 'admin');
+    }catch(Exception $e){
+        echo $e->getMessage();
+    }
+    return $con;
+}
+
+
 
 /********************     CHAMADAS AS FUNÇÕES     ********************/
 
@@ -45,23 +57,40 @@ function cadastroAuxRemoto($sql){
 	}
 }
 
+function cadastroAuxRemoto2($sql){
+    try{
+        $con = conexao_remota2();
+        $consulta = $con->prepare($sql);
+        $consulta->execute();
+    }catch (Exception $e){
+        echo $e->getMessage();
+    }
+}
+
+
+
 function insertQuery($sql, $operacao, $id = null){
 	try{
-		$aleatorio = rand(0, 1);
+		$aleatorio = rand(0, 2);
 		echo "<script>alert('Selecionando banco randomicamente')</script>";
 		if($aleatorio == 0) {
 			//Primeiro em banco local
 			insertBancoLocal($sql);
 			insertMovimento($aleatorio, $operacao, $id);
 			insertBancoRemoto1($sql);
+            insertBancoRemoto2($sql);
 		}elseif ($aleatorio == 1) {
 			//primeiro em banco remoto 1
 			insertBancoRemoto1($sql);
 			insertBancoLocal($sql);
 			insertMovimento($aleatorio, $operacao, $id);
+            insertBancoRemoto2($sql);
 		}elseif ($aleatorio == 2){
 			//conexao remoto 2
-			echo "cadastro no banco 2";
+            insertBancoRemoto2($sql);
+            insertBancoLocal($sql);
+            insertMovimento($aleatorio, $operacao, $id);
+            insertBancoRemoto1($sql);
 		}
 	}catch (Exception $e){
 		echo $e->getMessage();
@@ -84,6 +113,13 @@ function insertBancoRemoto1($sql){
 	$con_remota = conexao_remota1();
 	$consulta_remota = $con_remota->prepare($sql);
 	$consulta_remota->execute();
+}
+
+function insertBancoRemoto2($sql){
+    echo "<script>alert('Cadastrando no banco Remoto 2')</script>";
+    $con_remota = conexao_remota2();
+    $consulta_remota = $con_remota->prepare($sql);
+    $consulta_remota->execute();
 }
 
 /********************     CADASTRO DE MOVIMENTO     ********************/

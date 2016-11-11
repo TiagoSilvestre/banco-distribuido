@@ -13,8 +13,8 @@
 	<?php require "backend.php";?>
 		<div class="container">
 			<div class="processando" style="background-color: yellow;display: none"><img src="loading.gif" style="width: 36px;">Processando...</div>
-			<p style="text-align: center;font-size: 23px;"><u></u></p>
-
+			<p style="text-align: center;font-size: 23px;"><u>Cadastro de Pessoas</u></p>
+			<i><small><b>*Campos obrigatorios</b></small></i>
 			<form method="POST" action="cadastra.php">
 				<div class="contint">
 					<div class="flr">
@@ -29,7 +29,7 @@
 
 				<div class="contint">
 					<div class="flr">
-						<p>Nome:</p>
+						<p>* Nome:</p>
 					</div>
 
 					<div>
@@ -40,7 +40,7 @@
 
 				<div class="contint">
 					<div class="flr">
-						<p>Logradouro:</p>
+						<p>* Logradouro:</p>
 					</div>
 
 					<div>
@@ -59,7 +59,7 @@
 
 				<div class="contint">
 					<div class="flr">
-						<p>Bairro:</p>
+						<p>* Bairro:</p>
 					</div>
 
 					<div>
@@ -78,7 +78,7 @@
 
 				<div class="contint">
 					<div class="flr">
-						<p>Cidade:</p>
+						<p>* Cidade:</p>
 					</div>
 
 					<div>
@@ -98,7 +98,7 @@
 
 				<div class="contint">
 					<div class="flr">
-						<p>Estado:</p>
+						<p>* Estado:</p>
 					</div>
 
 					<div>
@@ -117,7 +117,7 @@
 
 				<div class="contint">
 					<div class="flr">
-						<p>Paises:</p>
+						<p>* Paises:</p>
 					</div>
 
 					<div>

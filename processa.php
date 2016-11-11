@@ -13,6 +13,7 @@ $sql = "INSERT INTO {$tabela}(nome) VALUES('{$valor}')";
 
 executaQuery($sql);
 cadastroAuxRemoto($sql);
+cadastroAuxRemoto2($sql);
 
 $sqlSel = "SELECT id FROM {$tabela} WHERE  nome = '{$valor}'";
 $id = executaQuery($sqlSel);
